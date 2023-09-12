@@ -40,7 +40,9 @@ jobs:
         working-directory: ./site
       - name: Build
         run: |
-          gulp dist --codelabs-dir=codelabs
+          gulp dist \
+            --codelabs-dir=codelabs \
+            --base-url=https://flat35hd99.github.io/play-codelab
         working-directory: ./site
 
       - name: Upload artifact
