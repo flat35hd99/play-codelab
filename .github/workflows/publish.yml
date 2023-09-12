@@ -24,7 +24,7 @@ jobs:
         run: |
           wget https://github.com/googlecodelabs/tools/releases/download/v2.2.6/claat-linux-amd64
           chmod +x claat-linux-amd64
-          sudo mv claat-linux-amd64 /bin
+          sudo mv claat-linux-amd64 /bin/claat
       - name: Compile using claat
         run: ls *.md | xargs claat export
 
