@@ -20,13 +20,14 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y wget
 
-      - name: Downlaod claat
+      - name: Download claat
         run: |
           wget https://github.com/googlecodelabs/tools/releases/download/v2.2.6/claat-linux-amd64
           chmod +x claat-linux-amd64
           sudo mv claat-linux-amd64 /bin/claat
       - name: Compile using claat
         run: ls *.md | xargs claat export
+        working-directory: ./site/codelabs
 
       - name: Use Node.js 12.x
         uses: actions/setup-node@v3
